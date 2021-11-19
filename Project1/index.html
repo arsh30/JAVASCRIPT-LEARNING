@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- use bootstrap here -> getbootstrap.com(Docs) -> copy the css link and paste just below the title -> copy the js link and paste just below the body -->
+<!-- Bootsrrap isme components hote hai unko direct copy paste kr skte hai like navigation bar,alert jo bhi Cheez uthaege vo direct isme html paste krdege -->
+<!-- copy navbar code and paste here -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<!-- step 2 start============================================= -->
+  <div class="container my-3">  <!-- my-3 is bootstrap class means y direction me 3 px margin do -->
+      <h1>Welcome to Magic Notes</h1>
+      <!-- step 3-> we want something jisme hum card ko dikha ske : better card -->
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Add a Note</h5>
+        <!-- step4 -> remove paragraph and lekr aayege text wala area which is in form -->
+
+            <div class="form-group">
+                <textarea class="form-control" id="addTxt" rows="3"></textarea>
+                <!-- <label for="floatingTextarea">Comments</label> -->
+            </div>
+
+         <button class="btn btn-primary" id="addBtn">Add Note</button>
+        </div>
+      </div>
+      <hr>
+      <h1>Your Notes</h1>
+       <hr>
+
+       <div id="notes" class="row container-fluid">
+           <!-- container fluid puri horizontal jgah occupy krta hai  and row class se yeh ik row me ajege-->
+
+           <!-- and paste card in this NOTE: YEH JO CARD hai isko hum htaege abhi yeh hum js ki help se krege coz multiple card aayege-->
+           <!-- <div class="notecard my-2 mx-2 card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Notes</h5>
+              <p class="card-text"> </p>
+              <a href="#" class="btn btn-primary">Delete Note</a>
+            </div>
+          </div> -->
+
+       </div>   
+  </div>
+
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/Project1/js/app.js"></script>
+  </body>
+</html>
