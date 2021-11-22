@@ -1,12 +1,15 @@
 console.log("this is project1");
 showNotes();
 
+// multiple cursor: alt + click
+  
 //if user add a not add it to local storage
 
 let addBtn = document.getElementById("addBtn");
 addBtn.addEventListener('click', function (e) {
 
     let addTxt = document.getElementById("addTxt");
+    let addTitle = document.getElementById("addTitle");
     let notes = localStorage.getItem("notes");  //we take notes from local storage it is possible that local storage has notes  notes name se jo key hai vo dedo
 
     if (notes == null) {
@@ -15,11 +18,16 @@ addBtn.addEventListener('click', function (e) {
          notesObj = JSON.parse(notes);  //parse: convert String to a JavaScript Aarray
         // agar kuch aray milne wala tha usko convert krke array bnaliya
     }
-    notesObj.push(addTxt.value);  //agar kisi ne bhi add btn pr click kra to notes update krdege usme ik hor note add krdege
+    let myObj = {
+        title:addTitle.value ,
+        text: addTxt.value
+    }
+    notesObj.push(myObj);  //agar kisi ne bhi add btn pr click kra to notes update krdege usme ik hor note add krdege
   
     // ab local storage update kra nhi hai toh update krege
     localStorage.setItem("notes", JSON.stringify(notesObj));  //abhi notes aaray hai usko string me convert krya because local storage me set string me hi krte hai it is a rule
     addTxt.value = "";
+    addTitle.value = "";
     console.log(notesObj);
 
     //Now here , Notes are added but it the notes are not displaying
@@ -37,8 +45,8 @@ function showNotes() {
         html +=  //html me card add krdo isko paste krdege your notes me
             `   <div class="notecard my-2 mx-2 card" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">Notes${index + 1}</h5>
-              <p class="card-text">${element} </p>
+              <h5 class="card-title">${element.title}</h5>
+              <p class="card-text">${element.text} </p>
               <button id="${index}" onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
             </div> 
           </div>`; //isme yeh ticket add krdege ans this.id likhne se us element ki id chli jatti hai jispr click kra hota hai
