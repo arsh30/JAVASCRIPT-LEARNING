@@ -1,7 +1,7 @@
-// console.log('this is tut 25');
+console.log('this is tut 25');
 // /*
 // exercise given in vid 21
-// you have to create a div and inject it into the page which contains a heading
+// you have to create a div and inject it into the page which contains a heading (means heading h uske baad inject krege)
 // whenever someone click on the div, it should be converted into editable item whenever user click away(blur). safe into local storage
 // */
 
@@ -25,7 +25,7 @@ divEle.setAttribute(
   "border:2px solid black; width: 160px; margin:34px; padding:23px;"
 ); //gve inline styling
 
-let container = document.querySelector(".container");
+let container = document.querySelector(".container");  //1st yeh krege
 let first = document.getElementById("myfirst");
 
 // insert the element befor element id first
