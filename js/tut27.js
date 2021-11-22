@@ -1,4 +1,4 @@
-console.log('this is tut 27');
+console.log("this is tut 27");
 
 /*JAVASCRIPT is a object oriented language. 
 eg: let h = {
@@ -11,13 +11,15 @@ IMPORT : agar hmare pass template hai ie Object ik usse hm sari cars bana sakte 
  */
 
 //object literals for creating objects
-let car = {  //we make car a object
-    name: "maruti 800",
-    topSpeed: 89,
-     run :function run() {  //passes the function 
-        console.log('car is running');
-    }
-}
+let car = {
+  //we make car a object
+  name: "maruti 800",
+  topSpeed: 89,
+  run: function run() {
+    //passes the function
+    console.log("car is running");
+  },
+};
 // console.log(car);
 // console.log(car.run());  //car is running op is undefined cause yeh return nahi krra hai kuch
 
@@ -31,20 +33,21 @@ let car = {  //we make car a object
 
 // =================================
 //CREATING A CONSTRUCTOR FOR CARS
-function GeneralCar(givenName, givenSpeed) {  //we make the function we need his name and topspeed. it is constructor jo ek car object bnaega
-    // jo bhi name denge vo set krdega
+function GeneralCar(givenName, givenSpeed) {
+  //we make the function we need his name and topspeed. it is constructor jo ek car object bnaega
+  // jo bhi name denge vo set krdega
 
-    this.name = givenName;   //IT is a constructor which has purpose to make the GENERAL car type object
-    this.topSpeed = givenSpeed;   //topspedd ik function bnaya jiske aage : jo hm chahte hai vo aaye
-    this.run = function () {
-        console.log(`${this.name} is running`);
-    }
+  this.name = givenName; //IT is a constructor which has purpose to make the GENERAL car type object
+  this.topSpeed = givenSpeed; //topspedd ik function bnaya jiske aage : jo hm chahte hai vo aaye
+  this.run = function () {
+    console.log(`${this.name} is running`);
+  };
 }
 //we can use the above constructor by using "new" keyWord
-car1 = new GeneralCar('Nissan', 180);
+car1 = new GeneralCar("Nissan", 180);
 console.log(car1);
 // console.log(car1.topSpeed);  . dot se uske andr ka function access krre hai
-car2 = new GeneralCar('bmw', 200);
+car2 = new GeneralCar("bmw", 200);
 console.log(car2.run());
 
 // console.log(car);
