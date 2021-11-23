@@ -16,7 +16,7 @@ arsh.name = "arsh";
 arsh.role = "programmer"; //name or role new bnaya
 arsh.occupation = "manager";
 // arsh.changeName('arsh2')
-console.log(arsh);
+// console.log(arsh);
 
 // ALTERNATE SYNTAX-> This create Object
 
@@ -64,39 +64,40 @@ programmer.prototype.constructor = programmer; //to achieve inheritance, hm yeh 
 //NoTE: By adding . means hum uske andr kuch create kr skte hai
 
 let rohan = new programmer("rohan", 2, 0, "javascript");
-console.log(rohan);
+// console.log(rohan);
 
 //=======================================================
 //homework : create foodObj and food se inherit krna hai or usse cake bnana hai (so ik cake name ki clas bnani h or ikflorr name ki class)
 
-function flour( company, egg, bakingPowder, whiteSugar) {
+function flour( company, egg, bakingPowder, whiteSugar) {  //1st flour constructor
     this.company = company,
     this.egg = egg,  //constructor
     this.bakingPowder = bakingPowder,
     this.whiteSugar = whiteSugar;
 }
-flour.prototype.slogan = function () {
+flour.prototype.slogan = function () {             //2nd flour constructor ke prototype me slogan add krdiya
     return `this is the best company, regards ${this.company}`
 }
 
 //create an object from this constructor
-let make = new flour("britania", 2, 500, 7);
+let make = new flour("britania", 2, 500, 7);      
 console.log(make.slogan());
 
-//cake-> 
-function cake(egg, bakingPowder, whiteSugar, water, oven) {
+// //cake-> flour ek thing hai or cake name ka kuch aaya vo bhi ik thing hai toh new constructor bnaege
+
+function cake(egg, bakingPowder, whiteSugar, water, oven) {  //4th step
   //inherita
-  flour.call(this, egg, bakingPowder, whiteSugar)
-  this.water = water,
+  flour.call(this, egg, bakingPowder, whiteSugar)  //5th step flour ko inherit cake se  -> this -> iss constructor ie cake ke respect me call kro or 4 cheeze dede
+     this.water = water,
     this.oven = oven
 }
 
-//iherit prototype
-cake.prototype = Object.create(flour.prototype);
+//inHerit prototype  -7th step
+cake.prototype = Object.create(flour.prototype);  //flour se create krdiya
 
-//manually set the constructor
-cake.prototype.constructor = cake;
-let cook = new cake(4, 500, 4, 500, 15);
+// //manually set the constructor -> 8th step
+cake.prototype.constructor = cake;  // jo  cake ka constructor hai usko equal krdo cake ke
+let cook = new cake(4, 500, 4, 500, 15);   //6th step -> isse slogan nhi mila
 console.log(cook);
 
 
