@@ -1,4 +1,5 @@
 // console.log('CodeWithHarry');  
+// NOTE : WE CAN DO ANYTHING WITH CONSOLE PRINT ANY VALUE Int,FLOAT,ARRAY,BOOLEAN,TABLE AND EVEN WE CAN THROW OUT ERROR
 // console.log(1); 
 // console.log(true); 
 // console.log(null); ;  
