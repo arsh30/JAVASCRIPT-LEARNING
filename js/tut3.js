@@ -65,6 +65,11 @@ console.log(city); //Javascript run to bottom
 const arr1 = [12, 23, 12, 53, 3];
 // arr1.push(45);
 console.log(arr1);
+
+
+//IMPORTANT -> We can declare variables without using the let const also
+arrObj = [10, 20, 30, 40];
+console.log(arrObj);
 // =================================
 
 // Rules for creating JavaScript Variables

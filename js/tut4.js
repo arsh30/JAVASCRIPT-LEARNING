@@ -1,4 +1,7 @@
 // note in javascript> EVERYTHING IS OBJECT, WE CAN CHECK USING typeof
+/*
+JavaScript stores the primitive value on the stack because the size of a primitive value is fixed. On the other hand, JavaScript stores the reference value on the heap because the size of the reference value is dynamic.
+*/
 
 // Primitive data types
 
@@ -47,7 +50,7 @@ console.log(typeof date);
 /* PRIMITIVE DATA TYPE:->
 Primitive data types are numbers, Booleans, strings, undefined, null, and symbol. Primitive data types are the basic or common data types in JavaScript.
 */
-let name = "Harry";
+// let name = "Harry";
 let isMale = true;
 
 /*
